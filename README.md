@@ -1,11 +1,11 @@
-# Dockerfile for Facebook Prophet
+# 📈 Facebook Prophet with Docker
 Dockerfile for [facebook/prophet](https://github.com/facebook/prophet), leveraging multi stage builds
 
 ### Usage
 
 #### Building Image from source
 ```sh
-docker build https://github.com/fabiwlf/prophet-docker # from git
+docker build "https://github.com/fabiwlf/prophet-docker.git#main" # from git
 docker build -f Dockerfile -t prophet-docker . # from Dockerfile
 ```
 
