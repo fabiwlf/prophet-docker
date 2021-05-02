@@ -9,9 +9,8 @@ RUN apt-get update && \
 
 
 COPY requirements.txt ./
-RUN pip install --upgrade pip && \
-    pip install --user --no-cache-dir -r requirements.txt && \
-    pip install --user --no-cache-dir prophet
+RUN pip install --user -r requirements.txt && \
+    pip install --user prophet
 
 FROM python:3.7.10-slim AS prophet-docker
 COPY --from=prophet-docker-ci /root/.local /root/.local

@@ -3,10 +3,9 @@ Dockerfile for [facebook/prophet](https://github.com/facebook/prophet), leveragi
 
 ### Usage
 
-#### Building Image from source
+#### Using Image from GitHub packages
 ```sh
-docker build "https://github.com/fabiwlf/prophet-docker.git#main" # from git
-docker build -f Dockerfile -t prophet-docker . # from Dockerfile
+docker pull ghcr.io/fabiwlf/prophet-docker:latest
 ```
 
 #### Running example
@@ -15,6 +14,10 @@ docker build -f Dockerfile -t prophet-docker . # from Dockerfile
 docker run -it --rm -v $(pwd)/example:/app prophet-docker
 ```
 
+#### Building Image from source
+```sh
+docker build -f Dockerfile -t prophet-docker . # from Dockerfile
+```
 
 #### Troubleshooting
 ```sh
