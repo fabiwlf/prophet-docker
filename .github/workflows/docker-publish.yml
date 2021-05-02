@@ -58,4 +58,4 @@ jobs:
           context: ./
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
-          labels: $IMAGE_LABELS
+          labels: ${{ env.IMAGE_LABELS }}
